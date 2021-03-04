@@ -234,3 +234,83 @@ a {
 .showClick {
   display: block;
 }
+
+/* media query */
+@media all and (max-width: 600px) {
+  .skills {
+    opacity: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transform: translateY(20px);
+    transition: all 1.5s ease;
+  }
+  .fadein {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  #about ul li {
+    margin: 0.5rem;
+    font-size: 4rem;
+  }
+}
+
+@media all and (max-width: 470px) {
+  .basic-nav .basic-menu li {
+    padding: 10px;
+  }
+  .nav .menu {
+    line-height: 30px;
+  }
+  .nav .menu li {
+    padding: 10px;
+  }
+  .selfie {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0, 30px;
+    filter: drop-shadow(0 0 8px var(--color-dark-pink));
+  }
+  #name {
+    padding: 60px;
+  }
+  #name p {
+    width: 200px;
+    padding: 0;
+  }
+  .skills {
+    opacity: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transform: translateY(20px);
+    transition: all 1.5s ease;
+  }
+  .fadein {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  .contactList {
+    margin: 0rem;
+    text-align: start;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.5s ease;
+  }
+  .contactList li i,
+  .contactList li span,
+  .contactList li a {
+    padding-left: 10px;
+    font-size: 1rem;
+  }
+  .fadeinContact {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  #projects .project .description {
+    width: 50%;
+    margin-left: 50px;
+    margin-right: 0;
+    line-height: 20px;
+    text-align: start;
+  }
+}
