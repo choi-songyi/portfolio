@@ -42,3 +42,14 @@ function skillsFadein(){
     }
 }
 window.addEventListener('scroll', skillsFadein);
+
+// 4. parralax event for name card
+function parralax(element,distance,speed){
+    const item = document.querySelector(element);
+    item.style.transform = `translateY(${distance*speed}px)`;   
+}
+function scroll(e){
+   let y=document.documentElement.scrollTop;
+   parralax("#name",y,0.5);
+}
+window.addEventListener('scroll',scroll);
