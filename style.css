@@ -1,0 +1,236 @@
+/* seting */
+:root {
+  --color-black: #25282c;
+  --color-light-pink: #ffeeef;
+  --color-pink: #e5bbbd;
+  --color-dark-pink: #b28b8d;
+  --color-point: #281c1c;
+}
+
+/* reset */
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-black);
+  scroll-behavior: smooth;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+body {
+  position: relative;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+/* nav */
+.nav {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background-color: var(--color-point);
+  z-index: 10;
+  transform: translateY(-80px);
+  transition: transform 0.5s ease;
+}
+.nav ul {
+  float: right;
+  display: flex;
+  flex-direction: row;
+}
+.nav ul li {
+  padding: 20px;
+  color: var(--color-light-pink);
+}
+.nav ul li:hover {
+  transform: scale(1.3);
+  transition: transform 300ms ease;
+  cursor: pointer;
+}
+.basic-nav {
+  position: relative;
+}
+.basic-nav .basic-menu {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+}
+.basic-nav .basic-menu li {
+  padding: 20px;
+  color: var(--color-point);
+}
+.basic-nav .basic-menu li:hover {
+  transform: scale(1.3);
+  transition: transform 300ms ease;
+  cursor: pointer;
+}
+
+/* container */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  padding: 130px 0;
+  text-align: center;
+  background-color: white;
+}
+.card-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  margin: 30px;
+  color: var(--color-point);
+}
+
+/* profile */
+#name {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: var(--color-light-pink);
+  z-index: -1;
+}
+#name p {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-top: 40px;
+  padding: 8px;
+  color: var(--color-point);
+}
+.selfie {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0, 50px;
+  filter: drop-shadow(0 0 8px var(--color-dark-pink));
+}
+
+/* about */
+#about p {
+  font-size: 1rem;
+  line-height: 30px;
+  margin: 0, 4rem;
+  padding: 4rem;
+}
+.skills {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 4rem 0;
+  transform: translateY(20px);
+  transition: all 1.5s ease;
+}
+.fadein {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+#about ul li {
+  margin: 0.5rem;
+  font-size: 4rem;
+}
+.fa-html5 {
+  color: #ee5335;
+}
+.fa-css3-alt {
+  color: #2c82eb;
+}
+.fa-js-square {
+  color: #f2cf1d;
+}
+.fa-sass {
+  color: #bf6094;
+}
+.fa-bootstrap {
+  color: #683fbf;
+}
+.fa-react {
+  color: #7ee7f3;
+}
+.fa-git-square {
+  color: #f24535;
+}
+
+/* project */
+#projects .project-box {
+  margin: 130px 0;
+  display: flex;
+  flex-direction: column;
+}
+#projects .project-box .project {
+  display: flex;
+  flex-direction: row;
+  margin: 25px;
+  justify-content: center;
+}
+#projects .project-box .project a {
+  margin: 0;
+  width: 20%;
+}
+#projects .project-box .project a .thumbnail {
+  width: 100%;
+  height: 150px;
+  border-radius: 3px;
+}
+#projects .project-box .project a:hover {
+  transform: scale(1.1);
+  transition: 700ms ease;
+  cursor: pointer;
+}
+
+#projects .project .description {
+  width: 40%;
+  margin-left: 50px;
+  margin-right: 0;
+  line-height: 35px;
+  padding: 7px 0;
+  text-align: start;
+}
+
+/* contact */
+.contactList {
+  margin: 3rem;
+  text-align: start;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.5s ease;
+}
+.fadeinContact {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+#contact ul li {
+  padding: 10px;
+  font-size: 1.5rem;
+  height: 50px;
+  line-height: 50px;
+}
+#contact ul li:last-child:hover {
+  cursor: pointer;
+}
+
+/* click box*/
+.click {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 25px;
+  color: var(--color-point);
+  background-color: var(--color-dark-pink);
+  border-radius: 3px;
+  text-align: center;
+  line-height: 25px;
+  margin: 0;
+  display: none;
+  mix-blend-mode: multiply;
+}
+.showClick {
+  display: block;
+}
