@@ -20,3 +20,25 @@ function smoothScroll(e){
 }
 menu.addEventListener('click',smoothScroll);
 basicMenu.addEventListener('click',smoothScroll);
+
+// 3. skills icoon and contact list fadein event
+function skillsFadein(){
+    const skills = document.querySelector('.skills');
+    const contact = document.querySelector('.contactList');
+    let skillsPosition = skills.getBoundingClientRect().top;
+    let contactListPosition = contact.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight;
+    if(skillsPosition<screenPosition){
+        skills.classList.add('fadein');
+    }
+    if(skillsPosition>screenPosition){
+        skills.classList.remove('fadein');
+    }
+    if(contactListPosition<screenPosition){
+        contact.classList.add('fadeinContact');
+    } 
+    if(contactListPosition>screenPosition){
+        contact.classList.remove('fadeinContact');
+    }
+}
+window.addEventListener('scroll', skillsFadein);
