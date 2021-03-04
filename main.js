@@ -53,3 +53,22 @@ function scroll(e){
    parralax("#name",y,0.5);
 }
 window.addEventListener('scroll',scroll);
+
+// 5. thumbnail click event
+const click = document.querySelector('.click');
+const box = document.querySelectorAll('.thumbnail');
+for(let i=0; i<box.length; i++){
+    box[i].addEventListener('mouseenter',showClick);
+    box[i].addEventListener('mouseleave',noClick);
+}
+function mouseMove(e){
+    let scrollTop = document.documentElement.scrollTop;
+    click.style.transform="translate("+e.clientX + "px,"+(e.clientY+scrollTop+10)+"px)";   
+}
+function showClick(){
+    click.classList.add('showClick');
+}
+function noClick(){
+    click.classList.remove('showClick');
+}
+window.addEventListener('mousemove',mouseMove);
