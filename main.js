@@ -21,7 +21,21 @@ function smoothScroll(e){
 menu.addEventListener('click',smoothScroll);
 basicMenu.addEventListener('click',smoothScroll);
 
-// 3. skills icoon and contact list fadein event
+// 3. change language button event
+const cnBtn = document.querySelector('#cn');
+const krBtn = document.querySelector('#kr');
+function changeCn(){
+    document.querySelector('#korean').style.display = 'none';
+    document.querySelector('#chinese').style.display = 'block';
+}
+function changeKr(){
+    document.querySelector('#chinese').style.display = 'none';
+    document.querySelector('#korean').style.display = 'block';
+}
+cnBtn.addEventListener('click',changeCn);
+krBtn.addEventListener('click',changeKr);
+
+// 4. skills icoon and contact list fadein event
 function skillsFadein(){
     const skills = document.querySelector('.skills');
     const contact = document.querySelector('.contactList');
@@ -43,7 +57,7 @@ function skillsFadein(){
 }
 window.addEventListener('scroll', skillsFadein);
 
-// 4. parralax event for name card
+// 5. parralax event for name card
 function parralax(element,distance,speed){
     const item = document.querySelector(element);
     item.style.transform = `translateY(${distance*speed}px)`;   
@@ -54,7 +68,7 @@ function scroll(e){
 }
 window.addEventListener('scroll',scroll);
 
-// 5. thumbnail click event
+// 6. thumbnail click event
 const click = document.querySelector('.click');
 const box = document.querySelectorAll('.thumbnail');
 for(let i=0; i<box.length; i++){

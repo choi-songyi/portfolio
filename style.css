@@ -113,11 +113,30 @@ a {
 }
 
 /* about */
+.language {
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  color: var(--color-light-pink);
+  background-color: var(--color-point);
+}
+.language:hover {
+  cursor: pointer;
+  color: var(--color-point);
+  background-color: var(--color-dark-pink);
+}
+.language:first-child {
+  margin-left: 1;
+}
 #about p {
   font-size: 1rem;
   line-height: 30px;
   margin: 0, 4rem;
-  padding: 4rem;
+  padding: 2rem 4rem 4rem 4rem;
+}
+#korean {
+  display: none;
 }
 .skills {
   opacity: 0;
